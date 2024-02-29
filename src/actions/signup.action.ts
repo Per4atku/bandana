@@ -2,14 +2,11 @@
 
 import { generateId } from 'lucia'
 import { Argon2id } from 'oslo/password'
-import { db } from './lib/db'
-import { lucia } from './lib/auth'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
-
-interface ActionResult {
-	error: string
-}
+import { lucia } from '@/lib/auth'
+import { db } from '@/lib/db'
+import { ActionResult } from '@/types/auth.types'
 
 export async function signup(formData: FormData): Promise<ActionResult> {
 	const username = formData.get('username')
