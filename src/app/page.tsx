@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-	title: '',
+	title: 'Bandana',
 	description: ''
 }
 
-export default function Page() {
+export default async function Page() {
 	return <div></div>
 }
